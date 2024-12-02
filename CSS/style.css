@@ -1,0 +1,65 @@
+.loader{
+    margin: 100px;
+}
+.loader img{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: bounce 8s infinite alternate;
+}
+.loader img:nth-child(2){
+    animation-delay: 2s;
+}
+.loader img:nth-child(3){
+    animation-delay: 4s;
+}
+.loader img:nth-child(4){
+    animation-delay: 6s;
+}
+@keyframes bounce{
+    to{
+        width: 150px;
+        height: 150px;
+        transform: translate3d(0,-50px,0);
+    }
+}
+.animation img{
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: bounce 8s infinite alternate;
+}
+.animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-left: 100px;
+    animation: complexAnimation 6s ease-in-out infinite;
+}
+
+@keyframes complexAnimation {
+    0% {
+        transform: translateX(0) rotate(0deg); /* Start from original position */
+        opacity: 1; /* Fully visible */
+    }
+    25% {
+        transform: translateX(200px) rotate(90deg); /* Move to right and rotate */
+        opacity: 0.5; /* Fade out */
+    }
+    50% {
+        transform: translateX(0) rotate(180deg); /* Reset position and rotate */
+        opacity: 1; /* Fully visible again */
+    }
+    75% {
+        transform: translateX(-200px) rotate(270deg); /* Move to left and rotate */
+        opacity: 0.5; /* Fade out */
+    }
+    100% {
+        transform: translateX(0) rotate(360deg); /* Return to original position and full rotation */
+        opacity: 1; /* Fully visible */
+    }
+}
